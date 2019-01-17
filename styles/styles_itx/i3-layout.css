@@ -10,7 +10,7 @@ body {
 #c_g_div_tab {
     float: none;
     position: static;
-    margin-left: 220px;
+    margin-left: 367px;
 }
 
     #c_g_div_tab ul {
@@ -55,6 +55,9 @@ body {
     background-color: #272727;
     border: none;
 }
+#c_l_div_livefrm #c_l_div_live{
+    margin-bottom: 0px !importants;
+}
 
 #c_g_div_wrapper {
     width: 1012px;
@@ -69,6 +72,8 @@ body {
 #c_g_div_logo img {
     width: 230px;
     height: 52px;
+    margin-left: 40px;
+    margin-top: 4px;
 }
 
 #c_g_div_top {
@@ -118,7 +123,7 @@ body {
         background-color: rgb(68, 68, 68);
         border-radius: 3px;
         margin-top: 3px;
-        margin-left: 40px;
+        margin-left: 370px;
         margin-right: 0px !important;
     }
 
@@ -137,10 +142,10 @@ body {
 
     }
     #c_l_div_toolbar ul.btn3 {
-        width: 145px !important;
+        width: 35px !important;
         height: 35px !important;
         margin-top: 2px;
-        margin-left: 85px;
+        margin-left: 20px;
     }
 
 *.c_l_tb_status td {
@@ -157,7 +162,6 @@ body {
     *.c_l_tb_status td.head {
         padding: 3px;
         width: 158px;
-        height: 28px;
         background-color: #CACACA !important;
     }
 
@@ -248,8 +252,8 @@ body {
     width: 35px;
 }
     #c_l_div_toolbar li.divided img {
-        width: 35px;
-        height: 35px;
+        width: 34px;
+        height: 34px;
     }
 
 #c_l_div_ptz_contents table.c_l_tb_pantilt {
@@ -516,3 +520,24 @@ body {
   padding-left: 12px;
 }
 /*END Nguyen 20171102*/
+
+
+#c_l_div_livefrm #c_l_div_live{
+    margin-bottom: 0px !important;
+}
+
+.playback #c_sh_div_shfrm #c_sh_div_search{
+    margin-bottom: 0px !important;
+}
+
+#c_g_div_tab ul li:nth-child(2){
+    display: none;
+}
+
+#idbtn4{
+    display: none;
+}
+
+#idbtn3 li:nth-child(2), #idbtn3 li:nth-child(4), #idbtn3 li:nth-child(8){
+    display: none;
+}

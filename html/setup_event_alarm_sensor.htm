@@ -59,7 +59,7 @@
         </div>
         <div id="c_sp_div_contents">
           <form action="/cgi-bin/webra_fcgi.fcgi" name="eventsetting_alarm_input" id="eventsetting_alarm_input">
-            <div class="c_sp_div_frame">
+            <div class="c_sp_div_frame" id="sensor_table">
               <h2><span id='lang_AlarmSensorsetting'>Alarm Sensor setting</span></h2>
               <table class="event event_sensor">
                 <colgroup>
@@ -86,7 +86,7 @@
                   <tr>
                     <th></th>
                     <th colspan="2" scope='colgroup'>
-                      <span id='lang_parameter'>Event Parameter</span>
+                      <!-- <span id='lang_parameter'>Event Parameter</span> -->
                     </th>
                     <th colspan="10" scope='colgroup' class="colspan">
                       <span id='lang_action'>Action</span>
@@ -110,7 +110,7 @@
                     <th>
                       <span id='lang_alarmout'>Alarm Out</span>
                     </th>
-                    <th class="small">
+                    <th class="small" >
                       <span id='lang_ptzpreset'>PTZ Preset</span>
                     </th>
                     <th class="small">

@@ -48,8 +48,8 @@
         </ul>
       </div>
        <form name="netsetting_rtp" id="netsetting_rtp" action='/cgi-bin/webra_fcgi.fcgi'>
-        <div id="c_sp_div_contents" style="width:860px">
-          <div class="c_sp_div_frame c_sp_div_frame_dot" style="width:810px">
+        <div id="c_sp_div_contents">
+          <div class="c_sp_div_frame c_sp_div_frame_dot"">
             <div class="network_rtp_setup">
               <div class="pagetitle">
                 <h1>
@@ -81,11 +81,12 @@
                   </dl>
                   <br/>
                   
-                  <h2>
+                  <h2 style="display:none;">
                     <span id="lang_audiobackchannel">AUDIO BACK CHANNEL</span>
                   </h2>
                   
-                  <dl>
+                  <dl style="display:none;">
+                    <div class="rtp_line2">
                     <dt>
                       <span id="lang_audiobackch_mode">MODE</span>
                     </dt> 
@@ -95,6 +96,8 @@
                       <option value="0">MANUAL</option>
                     </select>
                     </dd>
+                  </div>
+                  <div class="rtp_line3">
                     <dt>
                       <span id="lang_audiobackch_port">PORT</span>
                     </dt>
@@ -106,7 +109,7 @@
                         <input id="audio_backch_port2" style="width:45%; float:right" disabled/>
                       </div>
                     </dd>
-
+                  </div>
                   </dl>
                   <input type="hidden" id="rtspport" name="rtspport"/>
                   <input type="hidden" id="netserviceport" name="netserviceport"/>
@@ -118,10 +121,10 @@
                     <thead>
                       <tr>
                         <th></th>
-                        <th colspan='4' class="colspan">
+                        <th colspan='3' class="colspan">
                           <span id='lang_first_stream'>1ST STREAM</span>
                         </th>
-                        <th colspan='4' class="colspan">
+                        <th colspan='3' class="colspan">
                           <span id='lang_second_stream'>2ND STREAM</span>
                         </th>
                       </tr>

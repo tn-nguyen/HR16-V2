@@ -4221,6 +4221,12 @@ $z.v({
                 action+="&pwd_"+list[i].ch+"="+list[i].p;
                 action+="&hostname_"+list[i].ch+"="+list[i].hostname;
                 action+="&http_port_"+list[i].ch+"="+list[i].http_port;
+                action+="&rtsp_port_"+list[i].ch+"="+list[i].rtsp_port;
+                action+="&vcam_rtsp_addr_main_"+list[i].ch+"="+list[i].vcam_rtsp_addr_main;
+                action+="&vcam_rtsp_addr_second_"+list[i].ch+"="+list[i].vcam_rtsp_addr_second;
+                action+="&vcam_"+list[i].ch+"="+list[i].vcam;
+                action+="&vcam_cnt_"+list[i].ch+"="+list[i].vcam_cnt;
+                action+="&vcam_model_"+list[i].ch+"="+list[i].model;
 
                 bitmask_ch_updated.check(list[i].ch);
               }
@@ -4232,6 +4238,12 @@ $z.v({
                 action+="&pwd_"+i+"=";
                 action+="&hostname_"+i+"=";
                 action+="&http_port_"+i+"=";
+                action+="&rtsp_port_"+i+"=";
+                action+="&vcam_rtsp_addr_main_"+i+"=";
+                action+="&vcam_rtsp_addr_second_"+i+"=";
+                action+="&vcam_"+i+"=";
+                action+="&vcam_cnt_"+i+"=";
+                action+="&vcam_model_"+i+"=";
               }
             }
 
@@ -5062,7 +5074,15 @@ $z.v({
           "use_ssl":array["use_ssl_"+i],
           "u_done":array["u_done_"+i],
           "p_done":array["p_done_"+i],
-          "preview_rtsp":array["preview_rtsp_"+i]
+          "preview_rtsp":array["preview_rtsp_"+i],
+          "vcam":array["vcam_"+i],
+          "vcam_cnt":array["vcam_cnt_"+i],
+          "vcam_rtsp_addr_main":array["vcam_rtsp_addr_main_"+i],
+          "vcam_rtsp_addr_second":array["vcam_rtsp_addr_second_"+i],
+          "vcam_audio_flag":array["vcam_audio_flag_"+i],
+          "zoom_module_name":array["zoom_module_name_"+i],
+          "zoom_module_fwver":array["zoom_module_fwver_"+i],
+          "capa_version":array["capa_version_"+i]
         });
       }
 

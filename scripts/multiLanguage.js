@@ -2129,6 +2129,8 @@ function lang_part(part) {
         str += '$span&lang_btn_reboot='+           langArray['LTXT_SETUPSYSMANAGE_REBOOT_BTN'];
         str += '$span&lang_reboot_message='+           langArray['LTXT_SETUPSYSMANAGE_REBOOT_MESSAGE'];
         str += '$span&lang_renew_passwd='+  langArray['LTXT_RENEW_PASSWORD'];
+        str += '$span&lang_factory_reset='+           langArray['LTXT_SETUPSYSMANAGE_FACTORYRESET'];
+        str += '$span&lang_fac_reset_message='+           langArray['LTXT_SETUPSYSMANAGE_FAC_RESET_MESSAGE'];
 
 
 

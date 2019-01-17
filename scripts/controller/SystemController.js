@@ -712,7 +712,8 @@ $z.c({
         autoResize: true,
         me: null,
         open: function(event, ui) {
-          me = $( this );
+          $('.ui-dialog-titlebar-close').show();
+          me = $(this);
           $('#nand_info_note').html("<" + langArray["LTXT_SYSSET_NAND_FWUP_NOTE"] + ">");
           $('#nand_info_dont_close_browser').html("1. " + langArray["LTXT_SYSSET_NAND_FWUP_NOTE_DONT_CLOSE_BROWSER"]);
           $('#nand_info_dont_close_server').html("2. " + langArray["LTXT_SYSSET_NAND_FWUP_NOTE_DONT_CLOSE_SERVER"]);
@@ -926,6 +927,35 @@ $z.c({
           }
         }]
       });
+
+        $('#dialog_factory_reset').dialog({
+            autoOpen: false,
+            modal: true,
+            show: 'drop',
+            hide: 'drop',
+            title: langArray["LTXT_SETUPSYSMANAGE_FACTORYRESET"],
+            width: '450px',
+            resizable: false,
+            closeOnEscape: false,
+            autoResize: true,
+            me: null,
+
+            open: function (event, ui) {
+                $(".ui-dialog-titlebar-close").hide();
+            },
+            buttons: [{
+                text: langArray["LTXT_OK"],
+                click: function () {
+                    $(this).dialog('close');
+                }
+            },
+            {
+                text: langArray["LTXT_CANCEL"],
+                click: function () {
+                    $(this).dialog('close');
+                }
+            }]
+        });
 
 
       function reboot_progress() {
@@ -1273,6 +1303,10 @@ $z.c({
 
       $('#netfactorydefault').button().click( function() {
         $('#dialog_factory_default').dialog('open');
+      });
+        
+      $('#swfactorydefault').button().click( function() {
+        $('#dialog_factory_reset').dialog('open');
       });
 
       $('#upgrade_yes').button().click( function () {

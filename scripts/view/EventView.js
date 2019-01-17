@@ -1263,7 +1263,7 @@ $z.v({
               $(".vlossIgnoreInterval").show();
               $("table.event_vloss col.col2").css("width", "23%");
               $("table.event_vloss col.col3").css("width", "20%");
-              $("table.event_vloss col.col4").css("width", "20%");
+              $("table.event_vloss col.col4").css("width", "6%");
             }
 
             $('input:button.c_sp_btn_okcancel').click( function () {

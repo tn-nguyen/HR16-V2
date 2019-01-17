@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html>
 <head>
@@ -64,24 +64,6 @@
              </dl>
             </div>
 
-            <div class="c_sp_div_system network_fw_update" style="display:none">
-              <dl>
-                <dt class="list remove_alsok"><span id='lang_network_fw_update'>NETWORK FW UPDATE</span></dt>
-                <dd class="remove_alsok"><input type="button" id="netfwupdate" value="UPGRADE" /></dd>
-                <dt class="list"><span id='lang_factory_default'>FACTORY DEFAULT</span></dt>
-                <dd><input type="button" class="btn" id="netfactorydefault" value="FACTORY" /></dd>
-                <dt class="list"><span id='lang_systemdata'>SYSTEM DATA</span></dt>
-                <dd>
-                  <input type="button" class="half_btn" id="save" value="SAVE"/>
-                  <input type="button" class="half_btn" id="load" value="LOAD"/>
-                </dd>
-                <div class="foripx">
-                <dt class="list foripx"><span id='lang_reboot'>NVR RESTART</span></dt>
-                <dd><input type="button" class="btn foripx" id="nvrrestart" value="RESTART" /> </dd>
-                </div>
-              </dl>
-            </div>
-
             <div class="c_sp_div_system">
               <dl class="systemid">
                 <dt><span class="list"><span id='lang_Systemid'>SYSTEM ID</span></span></dt>
@@ -89,7 +71,25 @@
                   <input type="text" class="lstdisp" id="system_id" name="system_id" maxlength="16" />
                 </dd>
               </dl>
-              <dl>
+              <dl class="systemlang">
+                <dt><span class="list"><span id='lang_System'>LANGUAGE</span></span></dt>
+                <dd>
+                  <select  id="system_lang" class="syslang" name="passwd_expired" >
+                    <option value="0">ENGLISH</option>
+                    <option value="1">FRENCH</option>
+                  </select>
+                  </dd>
+                  
+              </dl>
+              <dl class="reboot_dvr">
+                <dt><span class="list"><span id='lang_System'>REBOOT ENCODER</span></span></dt>
+                <dd>
+                  <input type="button" value="REBOOT" id="reboot_bt"/>
+                </dd>
+                  
+              </dl>
+              
+              <dl style="display:none">
                 <dt class="list"><span id='lang_passwd'>Password</span></dt>
                 <dd>
                 <select  id="passwd_enable" class="lstdisp" name="passwd_enable" >
@@ -164,6 +164,34 @@
                 </dd>
               </dl>
             </div>
+
+            <div class="c_sp_div_system network_fw_update" style="display:none">
+              <dl>
+                <dt class="list"><span id='lang_factory_reset'>FACTORY RESET</span></dt>
+                <dd><input type="button" class="btn" id="swfactorydefault" value="RESET" /></dd>
+                <dt class="list"><span id='lang_factory_default'>FACTORY DEFAULT</span></dt>
+                <dd><input type="button" class="btn" id="netfactorydefault" value="FACTORY" /></dd>
+                <dt class="list remove_alsok"><span id='lang_network_fw_update'>NETWORK FW UPDATE</span></dt>
+                <dd class="remove_alsok"><input type="button" id="netfwupdate" value="UPGRADE" /></dd>
+                <dt class="list"><span id='system_import'>IMPORT</span></dt>
+                <dd><input type="file" id="systemimport" value="IMPORT" /> <input type="button" class="btn" id="sys_bt_import" value="IMPORT" /></dd>
+                <dt class="list"><span id='system_export'>EXPORT</span></dt>
+                <dd><input type="button" class="btn" id="systemexport" value="EXPORT" /></dd>
+                <dt class="list"><span id='lang_systemdata'>SYSTEM DATA</span></dt>
+                <dt><span></span></dt>
+                <dd><span></span></dd>
+                <dd>
+                  <input type="button" class="half_btn" id="save" value="SAVE"/>
+                  <input type="button" class="half_btn" id="load" value="LOAD"/>
+                </dd>
+                <div class="foripx">
+                <dt class="list foripx"><span id='lang_reboot'>NVR RESTART</span></dt>
+                <dd><input type="button" class="btn foripx" id="nvrrestart" value="RESTART" /> </dd>
+                </div>
+              </dl>
+            </div>
+
+            
           </div>
           <div id="c_g_div_button">
             <input type="submit" value="lang_OK" class="c_sp_btn_okcancel"/>
@@ -247,22 +275,39 @@
   <!-- end of div id="user_dialog" -->
 
   <div id="dialog_factory_default" title="FACTORY DEFAULT" style="display: none;">
-    <form id='form_factory_default'>
-
-      <div id="div_factory_default_message">
-        <dl>
-          <dt>
-            <span id='lang_fac_message'>WARNING</span>
-          </dt>
-       </dl>
-      </div> <!-- end of div id="div_fw_location" -->
-
-      <p class="factory_message">
-      </p>
-    </form>
-    <!-- end of form id='form_new_user' -->
+      <form id='form_factory_default'>
+  
+          <div id="div_factory_default_message">
+              <dl>
+                  <dt>
+                      <span id='lang_fac_message'>WARNING</span>
+                  </dt>
+              </dl>
+          </div> <!-- end of div id="div_fw_location" -->
+  
+          <p class="factory_message">
+          </p>
+      </form>
+      <!-- end of form id='form_new_user' -->
   </div>
-  <!-- end of div id="user_dialog" -->
+
+  <div id="dialog_factory_reset" title="FACTORY REST" style="display: none;">
+      <form id='form_factory_reset'>
+  
+          <div id="div_factory_reset_message">
+              <dl>
+                  <dt>
+                      <span style="white-space: pre-line" id='lang_fac_reset_message'>WARNING</span>
+                  </dt>
+              </dl>
+          </div> <!-- end of div id="div_fw_location" -->
+  
+          <p class="factory_reset_message">
+          </p>
+      </form>
+      <!-- end of form id='form_new_user' -->
+  </div>
+<!-- end of div id="user_dialog" -->
 
   <div id="dialog_reboot_confirm" style="display: none;">
     <form id="form_reboot_confirm">
